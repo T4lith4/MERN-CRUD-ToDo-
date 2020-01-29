@@ -61,6 +61,7 @@ onSubmit(e) {
         todo_responsible: ' ',
         todo_priority: ' '
     })
+    this.props.history.push('/');
 }
 //this render methods needs to display a form with different inputs which have functions updating their values to state as they change.
 //onSubmit passes the inputted values into the newTodo variable
@@ -74,7 +75,7 @@ onSubmit(e) {
                         <label> Description: </label>
                         <input type="text"
                                className="form-control"
-                               value={this.state.todo_description}
+                               value={this.setState.todo_description}
                                onChange={this.onChangeTodoDescription}
                         />
                     </div>
@@ -83,7 +84,7 @@ onSubmit(e) {
                         <label> Responsible: </label>
                         <input type="text"
                                className="form-control"
-                               value={this.state.todo_responsible}
+                               value={this.setState.todo_responsible}
                                onChange={this.onChangeTodoResponsible}
                         />
                     </div>
@@ -92,7 +93,7 @@ onSubmit(e) {
                         <label> Priority: </label>
                         <input type="text"
                                className="form-control"
-                               value={this.state.todo_priority}
+                               value={this.setState.todo_priority}
                                onChange={this.onChangeTodoPriority}
                         />
                     </div>

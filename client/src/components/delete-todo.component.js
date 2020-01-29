@@ -7,7 +7,7 @@ export default class DeleteTodo extends Component {
 
     constructor(props) {
         super(props);
-        //once the
+        //set state
         this.state = {
             todo_description: '',
             todo_responsible: '',
@@ -15,16 +15,18 @@ export default class DeleteTodo extends Component {
             todo_completed: ''
         }
         this.handleClick = this.handleClick.bind(this);
+        
     }
 //to display the todo item selected to be deleted
     componentDidMount() {
-        axios.get('http://localhost:4000/todos/'+this.props.match.params.id)
+        axios.get('http://localhost:4000/todos/'+ this.props.match.params.id)
             .then(response => {
                 this.setState({
                     todo_description: response.data.todo_description,
                     todo_responsible: response.data.todo_responsible,
                     todo_priority: response.data.todo_priority
                 })
+                
             })
             .catch(function(error) {
                 console.log(error)
@@ -38,6 +40,7 @@ export default class DeleteTodo extends Component {
         e.preventDefault();
         //use delete request to delete the specified todo item 
         axios.delete('http://localhost:4000/todos/delete/' + this.props.match.params.id);
+        //this.props.history.push('/todos/');
     }
 
     //this render method is responsible for displaying the different values of item selected to be deleted, along with a delete button
