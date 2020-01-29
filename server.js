@@ -11,7 +11,7 @@ let Todo = require('./todo.model');
 app.use(cors());//express needs to use cors so that the same-origin policy can be relaxed
 app.use(bodyParser.json());//express needs to use body parser to retrieve the body of json
 
-mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true, useUnifiedTopology: true});
 const connection = mongoose.connection;
 //inside the console of our command prompt display this message below so that we know connection has been successful
 connection.once('open', function() {

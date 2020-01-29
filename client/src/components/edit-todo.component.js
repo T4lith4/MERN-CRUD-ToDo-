@@ -75,7 +75,7 @@ export default class EditTodo extends Component {
                         <label>Description: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.setState.todo_description}
+                                value={this.state.todo_description}
                                 onChange={this.onChangeTodoDescription}
                                 />
                     </div>
@@ -83,7 +83,7 @@ export default class EditTodo extends Component {
                         <label>Responsible: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.setState.todo_responsible}
+                                value={this.state.todo_responsible}
                                 onChange={this.onChangeTodoResponsible}
                                 />
                     </div>
@@ -92,7 +92,7 @@ export default class EditTodo extends Component {
                         <label>Priority: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.setState.todo_priority}
+                                value={this.state.todo_priority}
                                 onChange={this.onChangeTodoPriority}
                                 />
                     </div>   
